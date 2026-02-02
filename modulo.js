@@ -1,18 +1,23 @@
-
 import { bgColor } from "./funciones.js";
 
 import { admin } from "./admin.js";
 import { procesarSemaforo } from "./semaforo.js";
+import { win } from "./win.js";
 
-
-async function name(){
-    const nombre=prompt("coloque un nombre");
-    console.log(await admin(nombre))
-    
+async function name() {
+  const nombre = prompt("coloque un nombre");
+  console.log(await admin(nombre));
 }
 
-function semaforo(mensaje){
-    console.log(mensaje)
+async function random() {
+  console.log(await win());
 }
-procesarSemaforo("cualquier cosa", semaforo)
-name();
+console.log();
+
+function semaforo(mensaje) {
+  console.log(mensaje);
+}
+procesarSemaforo("cualquier cosa", semaforo);
+// name();
+
+random();
